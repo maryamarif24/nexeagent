@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-white pt-24 pb-12 overflow-hidden">
       {/* Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -29,10 +29,10 @@ const Footer = () => {
           <div className="flex flex-col max-w-sm space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 bg-gray-900 rounded-xl flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
-                <img src="/logo.png" alt="Logo" className="w-6 h-6 invert" />
+                <img src="/logo.png" alt="Logo" className="w-6 h-6" />
               </div>
               <span className="font-bold text-xl tracking-tight text-gray-900">
-                Nexe<span className="text-primary">.Agent</span>
+                Nexe<span className="text-primary"> Agent</span>
               </span>
             </Link>
             
@@ -44,9 +44,11 @@ const Footer = () => {
             {/* Social Icons (Images) */}
             <div className="flex items-center gap-4">
               {[
-                { img: "/icons/twitter.png", link: "#" },
-                { img: "/icons/github.png", link: "#" },
-                { img: "/icons/linkedin.png", link: "#" },
+                { img: "/icons/instagram.png", link: "https://instagram.com/nexeagent/" },
+                { img: "/icons/github.png", link: "https://github.com/nexa-agent" },
+                { img: "/icons/linkedin.png", link: "https://www.linkedin.com/company/108818114/admin/dashboard/" },
+                { img: "/icons/twitter.png", link: "https://twitter.com/nexeagent" },
+                { img: "/icons/facebook.png", link: "https://www.facebook.com/share/14dRxkr81BX/" },
               ].map((social, i) => (
                 <a
                   key={i}
@@ -99,7 +101,7 @@ const Footer = () => {
               </div>
               <h5 className="text-gray-900 font-semibold">Let's talk about your project.</h5>
               <a 
-                href="mailto:nexeagent@gmail.com" 
+                href="/contact" 
                 className="flex items-center justify-between w-full p-3 bg-white border border-gray-200 rounded-xl hover:border-primary/30 transition-all group"
               >
                 <span className="text-sm text-gray-600 group-hover:text-primary">Contact Us</span>

@@ -9,7 +9,6 @@ import { useState, useRef, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Image from 'next/image';
 import Link from 'next/link';
-import AnimatedBackground from '@/components/AnimatedBackground';
 
 
 const valueProps = [
@@ -322,7 +321,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/Office.png"
-            alt="Office Background"
+            alt="Hero Background"
             fill
             className="object-cover"
             priority
@@ -342,11 +341,42 @@ export default function HomePage() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="text-6xl md:text-8xl font-black text-[#1a1c2e] tracking-tighter leading-[0.9] mb-8"
+      className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8"
     >
-      WE BUILD WEBSITES <br />
+      <span
+        className="text-[#1a1c2e]"
+        style={{
+          textShadow: `
+            1px 1px 0 #2a2c3e,
+            2px 2px 0 #3a3c4e,
+            3px 3px 0 #4a4c5e,
+            4px 4px 0 #5a5c6e,
+            5px 5px 0 #6a6c7e,
+            6px 6px 0 #7a7c8e,
+            7px 7px 10px rgba(0, 0, 0, 0.5),
+            8px 8px 20px rgba(0, 0, 0, 0.3)
+          `
+        }}
+      >
+        WE BUILD WEBSITES
+      </span>
+      <br />
       {/* Updated to solid cyan with a drop shadow for visibility */}
-      <span className="text-[#00bcd4] drop-shadow-[0_2px_10px_rgba(0,188,212,0.3)]">
+      <span
+        className="text-[#00bcd4]"
+        style={{
+          textShadow: `
+            1px 1px 0 #008b9e,
+            2px 2px 0 #007a8a,
+            3px 3px 0 #006976,
+            4px 4px 0 #005862,
+            5px 5px 0 #00474e,
+            6px 6px 0 #00363a,
+            7px 7px 10px rgba(0, 0, 0, 0.8),
+            8px 8px 20px rgba(0, 0, 0, 0.6)
+          `
+        }}
+      >
         THAT THINK.
       </span>
     </motion.h1>
@@ -355,7 +385,16 @@ export default function HomePage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
-      className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed mb-12 font-medium"
+      className="text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed mb-12 font-medium"
+      style={{
+        textShadow: `
+          1px 1px 0 #fff,
+          -1px -1px 0 #fff,
+          1px -1px 0 #fff,
+          -1px 1px 0 #fff,
+          0 4px 10px rgba(255, 255, 255, 0.6)
+        `
+      }}
     >
       Transform your business with AI-powered automation, intelligent systems,
       and digital products that work smarter so you can scale faster.
